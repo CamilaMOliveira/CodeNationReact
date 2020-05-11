@@ -1,0 +1,271 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Montserrat", sans-serif;
+	color: #fff;
+	font-size: 10px;
+}
+
+.header-content {
+	background: linear-gradient( 0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 212, 255, 0) 75% ), url('../img/capa-madmax2.jpg');
+	background-size: cover;
+	height: 90vh; /* 90% of the height of the viewport (the visible window portion inside of the browser) */
+	padding: 20px; /* To add a little space on top of the navigation bar */
+}
+
+.navbar {
+	margin: 0px 210px; /* Space left and right between IMDB logo and Username, to borders */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-weight: bold;
+}
+
+.navbar-list ul, .nav-info ul {
+	list-style: none; /* To remove the dots from the list */
+	display: flex; /* So that the list elements will be side by side, and not under each other */
+}
+
+.navbar-list li, .nav-info li {
+	margin: 0px 25px; /* Add spaces between the words in the list */
+	cursor: pointer; /* So that mouse pointer becomes a little hand when hovering over the words */
+	font-size: 1.3em;
+}
+
+.navbar-list a, .movie-info-genre-list a {
+	text-decoration: none; /* So that the words wont be underlined like links */
+	color: #fff; /* So that the words wont be blue like links */
+}
+
+.navbar-list a:hover, .movie-info-genre-list a:hover {
+	color: #e4bb23; /* So that the words become Yellow when the mouse hovers over */
+}
+
+.navbar-user {
+	display: flex; /* So that the list elements will be side by side, and not under each other */
+}
+
+.navbar-user img {
+	border-radius: 100%; /* So that we have a round bordered image */
+	height: 45px; /* Image size */
+	width: 45px;
+	margin-right: 15px; /* Space between the picture and the username */
+}
+
+.navbar-user-name {
+	font-size: 1.3em;
+}
+
+.movie-info {
+	margin: 0 auto;
+	margin: 265px auto;
+    width: 960px;
+}
+
+.movie-info-name {
+	font-size: 6.5em;
+	margin-bottom: 15px; /* Distance under the title and the genre list items */
+	line-height: 1.2em; /* Distance between the title lines */
+}
+
+.movie-info-genre-item {
+	margin-right: 12px; /* Distance between the list words */
+	font-size: 1.3em;
+	align-items: center;
+}
+
+.movie-info-button {
+	margin-top: 20px;
+	background-color:  #e4bb23;
+	border: none;
+	border-radius: 40px;
+	color: black;
+	font-size: 1.5em;
+	padding: 15px 50px;
+}
+
+.movie-info-button i {
+	font-size: 1.5em; /* Size of the icon */
+	position: absolute;
+	left: 395px; /* Position of the icon */
+	top: 563px;
+}
+
+.movie-info-button:hover {
+	background-color: #bc9a1d;
+}
+
+.movie-info-theater {
+	font-size: 1.4em;
+	padding-top: 20px;
+}
+
+.movie-info-date {
+	font-size: 1.4em;
+	color: #bc9a1d;
+}
+
+.nav-info a {
+	text-decoration: none; /* So that the words wont be underlined like links */
+	color: #e4bb23; /* So that the words wont be blue like links */
+	font-weight: bold;
+}
+
+.content {
+	background-color: #f2f2f2;
+}
+
+.nav-info {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+	display: flex;
+	justify-content: center;
+	padding: 15px;
+}
+
+.nav-info a {
+	color: #e4bb23;
+	padding: 26px 0; /* Height of the link underline */
+}
+
+.nav-info a:hover {
+	box-shadow: inset 0 -1px 0 #e4bb23; /* So that the words become Yellow when the mouse hovers over */
+}
+
+.cards {
+	display: flex;
+	flex-wrap: wrap; /* Quebra a linha assim que um dos flex itens não puder mais ser compactado */
+	justify-content: center;
+}
+
+.individual-card {
+	width: 230px;
+	margin: 30px;
+	background-color: white;
+	border-radius: 10px;
+	border: 1px solid;
+	border-color: rgba(0, 0, 0, 0.08);
+}
+
+.card-image img {
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	width: 100%;
+	opacity: 1;
+	display: block;
+	height: auto;
+	display: block;
+	transition: .5s ease;
+	backface-visibility: hidden;
+}
+
+.card-content {
+	color: black;
+	font-size: 1.3em;
+	font-weight: bold;
+	padding-left: 10px
+}
+
+.card-genre {
+	display: flex;
+}
+
+.genre-item {
+	text-decoration: none; /* So that the words wont be underlined like links*/
+	color: #e4bb23; /* So that the words wont be blue like links */
+	font-weight: normal;
+}
+
+.genre-item:hover {
+	text-decoration: underline;
+}
+
+.card-footer {
+	display: flex;
+	justify-content: space-between;
+	color: black;
+	font-size: 2em;
+	font-weight: bold;
+	padding: 0px 10px 10px; /* 0 up, 10 left and right, 10 bottom */
+}
+
+.card-footer i {
+	color: #ccc;
+	cursor: pointer; /* So that mouse pointer becomes a little hand when hovering over the words */
+}
+
+.card-footer i:hover {
+	color: red;
+}
+
+footer {
+	display: flex;
+	margin: 0px 200px;
+	justify-content: space-between;
+	padding: 30px 30px 0px;
+}
+
+.footer-icons i {
+	color: #ccc;
+	font-size: 2.5em; /* Size of the icon */
+	padding: 20px;
+	color: #bababa;
+}
+
+.icon-twitter i:hover {
+	color: #55acee;
+}
+
+.icon-facebook i:hover {
+	color: #3b5998;
+}
+
+.icon-instagram i:hover {
+	color: #e95950;
+}
+
+.card-poster-info h3 {
+	color: #e4bb23;
+	font-size: 2em;
+	line-height: 1em;
+}
+
+.card-poster-info {
+	transition: all 0.2s ease-in-out;
+	opacity: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+ .card-image {
+	position: relative;
+	background-color: black;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+.card-image:hover img {
+	opacity: 0.5;
+}
+  
+.individual-card .card-image:hover .card-poster-info {
+	opacity: 1;
+}
+
+.card-poster-link {
+	color: #fff;
+	font-size: 5em;
+	transition: all 0.2s ease-in-out;
+}
+
+.card-poster-link:hover {
+	color: #e4bb23;
+}
