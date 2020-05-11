@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+	background-color: #F9F9F9;
+	font-family: "Montserrat", sans-serif;
+}
+
+.header-content {
+    display: flex;
+	align-items: center;
+    justify-content: space-around;
+	height: 8vh;
+	width: 100%;
+    background-color: white;
+    /* border-color: black; */
+	border-bottom-color: #ECE7E7;
+    border-bottom-style: solid;
+    /* border-style: solid; */
+}
+
+.header-content__instagram-logo img {
+    margin-top: 10px;
+	width: 150px;
+	height: 150px;
+}
+
+.header-content__send-icon i {
+    font-size: 1.1em;
+    color: #23201f;
+    font-weight: bold;
+}
+
+.body-content__users {
+	/* height: 100vh; */
+	width: 100%;
+	margin-left: 20%;
+}
+
+.body-content__users ul {
+	padding-left: 30px;
+	width: 100%;
+	display: flex;
+	list-style: none;
+	align-items: center;
+	justify-content: left;
+}
+
+.body-content__users li {
+	margin: 0px 10px; /* Add spaces between the words in the list */
+}
+
+/* Fazer uma classe para a img específica, e depois para img--active (com o background colorido) */
+.body-content__users img { 
+	padding: 5px;
+	width: 80px;
+	height: 80px;
+	border: double 5px solid transparent;
+	/* border-color: none; */
+	border-radius: 100%;
+}
+
+/* .body-content__image {
+	background-image: radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf);
+	background-origin: border-box;
+	background-clip: border-box;
+} */
+
+.body-content__image img {
+	/* padding: 5px; */
+	/* border-image: space; */
+	/* border: 5px solid; */
+	/* border-spacing: 15px; */
+	/* border-collapse: separate; */
+	background-image: radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf);
+
+	/* background-origin: border-box; */
+	background-origin: border-box;
+	background-clip: border-box;
+	/* border-color: pink; */
+	/* border-image: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+	border-radius: 100%; */
+	/* border-image: radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf); */
+	/* border-image: radial-gradient(circle, red, yellow, green); */
+	/* border-image-slice: 1; */
+}
+
+.posts {
+	height: 100%;
+	width: 58%;
+	margin: 0 auto;
+	/* margin-left: 20%; */
+}
+
+.posts ul {
+	list-style: none;
+}
+
+.posts li {
+	margin: 28px 0px; /* Add spaces between the words in the list */
+}
+
+.post-card {
+	height: 100%;
+	width: 100%; 
+	border-color: #ECE7E7;
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 8px;
+	background-color: white;
+}
+
+.post-header {
+	display: flex;
+	place-content: center;
+	justify-content: space-between;
+	margin: 7px 10px 3px; /* Top, left/right, bottom */
+}
+
+.post-header-user {
+	display: flex;
+}
+
+/* .post-header-user {
+	display: flex;
+	margin-top: -10px; */
+	/* margin-left: -30px; */
+	/* justify-content: space-around; */
+/* } */
+
+.post-header-user-picture img {
+	height: 40px;
+	width: 40px;
+	border-radius: 100%;
+}
+
+.post-header-user-name {
+	font-size: 0.8em;
+	font-weight: bold;
+	margin: 10px 10px;
+}
+
+.post-header-options {
+	cursor: pointer;
+	place-self: center;
+}
+/*
+.post-content {
+	margin-left: 0;
+	padding: 0;
+} */
+
+.post_content img {
+	height: 100%;
+	width: 100%;
+	/* margin-left: -5.3vh; */
+}
+
+.footer-buttons {
+	display: flex;
+	/* display: block; */
+	/* justify-content: space-around; */
+	/* margin: 5px; */
+	font-size: 1.7em;
+	font-weight: bold;
+	margin: 5px 0px;
+}
+
+.footer-buttons-left {
+	/* display: center; */
+	/* justify-content: space-evenly; */
+	padding-left: 12px;
+	/* margin-right: auto; */
+}
+
+.footer-buttons-left i {
+	margin-right: 20px;
+	cursor: pointer;
+	/* display: center; */
+	/* justify-content: space-evenly; */
+	/* margin-left: 20px; */
+}
+
+.footer-buttons-right {
+	margin-left: auto;
+	margin-right: 12px;
+	cursor: pointer;
+	/* margin: 0px 100px; */
+}
+
+.footer-likes {
+	display: flex;
+	/* margin: 7px 10px 3px; Top, left/right, bottom */
+	background-color: #F3F2F2;
+}
+
+.footer-likes-user-picture img {
+	height: 30px;
+	width: 30px;
+	border-radius: 100%;
+	margin: 5px 5px 0;
+}
+
+.footer-likes-comment {
+	font-size: 0.75em;
+	font-weight: normal;
+	margin: 10px 10px;
+	place-self: center;
+	color: #38393c;
+}
+
+.footer-likes-comment a {
+	text-decoration: none;
+	color: black;
+	font-weight: bold;
+}
+
+
+
+
+
+
+
+
