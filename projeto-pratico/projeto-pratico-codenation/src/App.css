@@ -1,8 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+
 .App {
   text-align: center;
 }
 
-.App-logo {
+body {
+  background-color: #f9f9f9;
+}
+
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -11,28 +17,72 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+} */
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  /* padding-top: 0.5rem; */
+  /* padding-bottom: 0.5rem; */
+  background-color: white;
+  border-bottom: 2px solid #dfdfdf;
+  width: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 1rem;
+  color: black;
 }
 
-.App-link {
+.App-nav {
+  /* border: 3px solid black; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  position: relative;
+  width: 100%;
+}
+
+.App-nav__title {
+  font-family: 'Cookie', cursive;
+  /* border: 1px solid black; */
+  font-size: 3rem; /* 1rem = 16px */
+  text-decoration: none;
+  color: black;
+}
+
+.App-nav__icons {
+  display: flex;
+  color: black;
+}
+
+.App-nav__icons--search {
+  font-size: 1.2rem;
+  border: none;
+  outline:none;
+  cursor: pointer;
+  background: none;
+}
+
+.App-nav__icons--cart {
+  font-size: 1.2rem;
+  margin-left: 0.5rem; /* So that we have space between the buttons */
+  border: none; /* So that no gray border will appear around the button */
+  outline:none; /* So that no purple border will appear around the button when we click it */
+  cursor: pointer; /* So that the hand icon will appear when we hover over the button */
+  background: none; /* So that no gray background will appear when the button is displayed on a mobile phone */
+}
+
+/* .App-link {
   color: #61dafb;
-}
+} */
 
-@keyframes App-logo-spin {
+/* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-}
+} */
