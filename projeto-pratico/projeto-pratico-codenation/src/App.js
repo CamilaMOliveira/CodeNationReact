@@ -64,15 +64,25 @@ class App extends React.Component {
                 this.state.data.map(item => {
                   return(
                     <div className="card">
-                      <a className="card__link" href="/">
-                        <img className="card__image" src={item.image} alt={item.name}/>
+                      <a className="card__link" href="/produto/vestido">
                         {
-                          ((item.discount_percentage !== "") ?
-                          /* If the outfit has a discount to be applied, display it */
-                            <div className="card__discount">{item.discount_percentage} OFF </div>
-                            :
-                            /* Else, don't display any discount price */
-                            "")
+                          (
+                            (item.image !== "") ?
+                              <img className="card__image" src={item.image} alt={item.name}/>
+                              :
+                              <img className="card__image" src="https://via.placeholder.com/470x594/FFFFFF/?text=Imagem+Indispon%C3%ADvel" alt={item.name}/>
+                          )
+                        }
+
+                        {
+                          (
+                            (item.discount_percentage !== "") ?
+                              /* If the outfit has a discount to be applied, display it */
+                              <div className="card__discount">{item.discount_percentage} OFF </div>
+                              :
+                              /* Else, don't display any discount price */
+                              ""
+                          )
                         }
                         <div className="card__title">{item.name}</div>
                         <div className="card__price">{item.regular_price}</div>

@@ -102,6 +102,7 @@ body {
   /* We need to set position relative here
   * in order for the card discount to appear
   * in the correct bottom left position */
+  /* border: 1px solid pink; */
   position: relative;
   margin: 0.2rem;
   margin-bottom: 1.5rem;
@@ -111,11 +112,13 @@ body {
   /* We need to set position relative here
   * in order for the card discount to appear
   * in the correct bottom left position */
+  /* border: 5px solid green; */
   position: relative;
   text-decoration: none;
 }
 
 .card__image {
+  /* border: 5px solid black; */
   position: relative;
   width: 100%;
   border-radius: 2%;
@@ -137,7 +140,6 @@ body {
 }
 
 .card__discount{
-  /* border: 1px solid blue; */
   position: absolute;
   color: black;
   bottom: 20%;
