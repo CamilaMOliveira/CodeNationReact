@@ -9,6 +9,7 @@ import './App.scss';
 
 const App = () => (
   <div>
+    <Topbar/>
   </div>
 );
 
