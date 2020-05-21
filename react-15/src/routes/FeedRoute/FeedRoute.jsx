@@ -10,7 +10,8 @@ import './FeedRoute.scss';
 const FeedRoute = () => {
   return (
     <div>
-      <Stories></Stories>
+      <Stories/>
+      <Posts/>
     </div>
   );
 };
