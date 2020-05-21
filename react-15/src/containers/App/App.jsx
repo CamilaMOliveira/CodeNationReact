@@ -9,7 +9,10 @@ import './App.scss';
 
 const App = () => (
   <div>
-    <Topbar/>
+    <BrowserRouter>
+      <Topbar/>
+      <Routes/>
+    </BrowserRouter>
   </div>
 );
 

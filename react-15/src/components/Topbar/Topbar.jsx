@@ -9,7 +9,7 @@ import 'font-awesome/css/font-awesome.min.css';
 import './Topbar.scss';
 
 const Topbar = () => (
-  <header className="topbar">
+  <header data-testid="topbar" className="topbar">
     <div className="container">
       <a href="/" className="topbar__logo">
         <LogoSvg/>
