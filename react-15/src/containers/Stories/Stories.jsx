@@ -10,11 +10,11 @@ const Stories = ({ stories, getUserHandler }) => {
     <React.Fragment>
       <section data-testid="stories" className="stories">
         <div className="container">
-          <a href="/" className="user__thumb user__thumb--hasNew">
+          <button className="user__thumb user__thumb--hasNew">
             <div className="user__thumb__wrapper">
             <img src="https://viniciusvinna.netlify.app/assets//api-instagram/profiles/black-panther/black-panther-profile.jpg" alt="T'Challa"></img>
             </div>
-          </a>
+          </button>
           <a href="/" className="user__thumb">
             <div className="user__thumb__wrapper">
             <img src="https://viniciusvinna.netlify.app/assets//api-instagram/profiles/bruce/bruce-profile.jpg" alt="Bruce Wayne"></img>

@@ -6,6 +6,15 @@ import UserProfile from '../../containers/UserProfile';
 import './UserForm.scss';
 
 const UserForm = () => {
+  let sayHello = () => {
+    console.log("Cadastrado com sucesso");
+   return(
+    // alert('Hello!')
+    <div class="success-message">CADASTRADO COM SUCESSO</div>
+     //<SuccessMessage></SuccessMessage>
+   );
+  }
+
   return (
     <React.Fragment>
       <UserProfile
@@ -24,7 +33,7 @@ const UserForm = () => {
             <input type="text" id="email" name="email" placeholder="Digite seu e-mail"></input>
             <label>Url da Imagem de Perfil (use a url da imagem do Linkedin)</label>
             <input type="text" id="url" name="url" placeholder="http://..."></input>
-            <button onClick={console.log(`Button clicked`)}>Cadastrar</button>
+            <button onClick={sayHello}>Cadastrar</button>
           </div>
         </div>
       </div>

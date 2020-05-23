@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 import './SuccessMessage.scss';
 
 const SuccessMessage = () => (
-  <div data-testid="success-message" className="success-message">
-    <svg
+  <div data-testid="success-message" className="success-message">SUCESSO
+    {/* <svg
       className="successAnimation animated"
       xmlns="http://www.w3.org/2000/svg"
       width="70"
@@ -42,7 +42,7 @@ const SuccessMessage = () => (
 
     <div className="success-message__content">
       <p>Visite a página <Link to="/users">users</Link> para visualizar o novo usuário</p>
-    </div>
+    </div> */}
   </div>
 );
 
