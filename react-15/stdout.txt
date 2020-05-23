@@ -1,0 +1,50 @@
+
+> instadev@0.1.0 submit /Users/camilaoliveira/codenation/react-15
+> react-scripts test src/__tests__/submit.test.js --reporters=default --reporters=jest-junit "--watchAll=false"
+
+  console.log src/components/Post/Post.jsx:7
+    Post Info = [object Object]
+
+  console.error node_modules/react-dom/cjs/react-dom.development.js:88
+    Warning: Invalid DOM property `class`. Did you mean `className`?
+        in div (at User.jsx:17)
+        in a (at User.jsx:16)
+        in header (at User.jsx:15)
+        in article (at User.jsx:14)
+        in div (at User.jsx:13)
+        in User (at submit.test.js:110)
+        in Router (at submit.test.js:109)
+
+  console.log src/routes/FeedRoute/FeedRoute.jsx:13
+    Test bla
+
+  console.log src/components/Post/Post.jsx:7
+    Post Info = undefined
+
+  console.log src/components/Post/Post.jsx:7
+    Post Info = undefined
+
+  console.log src/components/Post/Post.jsx:7
+    Post Info = userposts
+
+  console.log src/components/Post/Post.jsx:9
+    Entrou no if
+
+  console.log src/components/Post/Post.jsx:7
+    Post Info = userposts
+
+  console.log src/components/Post/Post.jsx:9
+    Entrou no if
+
+  console.log src/components/Post/Post.jsx:7
+    Post Info = userposts
+
+  console.log src/components/Post/Post.jsx:9
+    Entrou no if
+
+  console.log src/components/Post/Post.jsx:7
+    Post Info = userposts
+
+  console.log src/components/Post/Post.jsx:9
+    Entrou no if
+
