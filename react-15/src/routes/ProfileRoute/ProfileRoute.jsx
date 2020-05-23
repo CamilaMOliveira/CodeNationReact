@@ -8,6 +8,11 @@ import Loading from '../../components/Loading';
 const ProfileRoute = () => {
   return (
     <div>
+      <UserProfile
+        avatar="https://viniciusvinna.netlify.app/assets//api-instagram/profiles/black-panther/black-panther-profile.jpg"
+        name="T'Challa"
+        username="@blackpanther"/>
+      <UserPosts/>
     </div>
   );
 };

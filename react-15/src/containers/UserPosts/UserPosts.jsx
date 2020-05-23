@@ -6,6 +6,12 @@ import './UserPosts.scss';
 
 const UserPosts = ({ posts }) => (
   <div className="container">
+    <section class="user-posts">
+      <Post postInfo="userposts"></Post>
+      <Post postInfo="userposts"></Post>
+      <Post postInfo="userposts"></Post>
+      <Post postInfo="userposts"></Post>
+    </section>
   </div>
 );
 

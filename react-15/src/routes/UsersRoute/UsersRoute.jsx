@@ -5,6 +5,7 @@ import UsersList from '../../containers/UsersList/UsersList';
 const UsersRoute = () => {
   return (
     <div className="container">
+      <UsersList/>
     </div>
   );
 };

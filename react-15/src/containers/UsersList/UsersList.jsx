@@ -5,11 +5,12 @@ import Loading from '../../components/Loading';
 
 import './UsersList.scss';
 
-const UersList = ({ users }) => {
+const UsersList = ({ users }) => {
   return (
     <section className="users-list">
+      <User/>
     </section>
   )
 };
 
-export default UersList;
+export default UsersList;

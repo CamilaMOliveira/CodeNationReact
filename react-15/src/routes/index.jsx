@@ -15,14 +15,17 @@ const Routes = () => (
 
     <Route exact path="/users">
       {/* UsersRoute => When we click on "Usuários" */}
+      <UsersRoute/>
     </Route>
 
     <Route path="/users/:username">
       {/* ProfileRoute => When we click on a username on a post */}
+      <ProfileRoute/> 
     </Route>
 
     <Route path="/newuser">
       {/* NewUserRoute => When we click on "Nova Conta" */}
+      <NewUserRoute/>
     </Route>
   </Switch>
 );

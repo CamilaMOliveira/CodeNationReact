@@ -16,14 +16,14 @@ const Topbar = () => (
       </a>
       <div className="topbar__group">
         <div className="topbar__icon">
-          <a href="/">
-            <i class="fas fa-users" aria-hidden="true"></i>
+          <a href="/users">
+            <i className="fas fa-users" aria-hidden="true"></i>
             <span>Usuários</span>
           </a>
         </div>
         <div className="topbar__icon">
-          <a href="/">
-            <i class="fas fa-user-plus" aria-hidden="true"></i>
+          <a href="/newuser">
+            <i className="fas fa-user-plus" aria-hidden="true"></i>
             <span>Nova Conta</span>
           </a>
         </div>
