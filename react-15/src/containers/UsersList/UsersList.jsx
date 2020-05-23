@@ -7,7 +7,7 @@ import './UsersList.scss';
 
 const UsersList = ({ users }) => {
   return (
-    <section className="users-list">
+    <section data-testid="users-list" className="users-list">
       <User/>
     </section>
   )

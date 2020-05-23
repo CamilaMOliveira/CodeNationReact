@@ -3,7 +3,7 @@ import React from 'react';
 import './Loading.scss';
 
 const Loading = () => (
-  <div className="loading">
+  <div data-testid="loading" className="loading">
     <div className='preloader'>
       <span />
       <span />

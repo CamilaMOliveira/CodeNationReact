@@ -4,7 +4,7 @@ import UsersList from '../../containers/UsersList/UsersList';
 
 const UsersRoute = () => {
   return (
-    <div className="container">
+    <div data-testid="users-route" className="container">
       <UsersList/>
     </div>
   );

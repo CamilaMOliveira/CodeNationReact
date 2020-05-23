@@ -10,7 +10,7 @@ const User = ({ infoUser })  => {
     // porque tudo ficará dentro de um loop
     // E este Return já está dentro de uma classe users-list, no aquivo
     // UsersList.jsx
-    <div class="users-list"> 
+    <div data-testid="user" class="users-list">
     <article className="post">
       <header className="post__header">
         <a href="/" class="user">
