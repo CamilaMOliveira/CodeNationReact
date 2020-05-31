@@ -9,19 +9,23 @@ import NewUserRoute from './NewUserRoute';
 const Routes = () => (
   <Switch>
     <Route exact path="/">
-
+      {/* Feed Route => We'll show the stories list (user rounded images), and the posts */}
+      <FeedRoute/>
     </Route>
 
     <Route exact path="/users">
-
+      {/* UsersRoute => When we click on "Usuários" */}
+      <UsersRoute/>
     </Route>
 
     <Route path="/users/:username">
-
+      {/* ProfileRoute => When we click on a username on a post */}
+      <ProfileRoute/> 
     </Route>
 
     <Route path="/newuser">
-
+      {/* NewUserRoute => When we click on "Nova Conta" */}
+      <NewUserRoute/>
     </Route>
   </Switch>
 );
