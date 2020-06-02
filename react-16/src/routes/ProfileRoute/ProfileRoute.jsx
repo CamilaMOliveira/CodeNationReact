@@ -10,7 +10,7 @@ const ProfileRoute = () => {
     <div data-testid="profile-route">
       <UserProfile
         avatar="https://viniciusvinna.netlify.app/assets//api-instagram/profiles/black-panther/black-panther-profile.jpg"
-        name="T'Challa"
+        name="T'Challabla"
         username="@blackpanther"/>
       <UserPosts/>
     </div>
