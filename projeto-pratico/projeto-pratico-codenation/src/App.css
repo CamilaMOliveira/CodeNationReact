@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500&family=Oswald&display=swap');
 
 .App {
+  border: 10px black;
   text-align: center;
   min-height: 100vh;
 }
