@@ -9,7 +9,7 @@ const Post = ({ postInfo, userInfo }) => {
 
   let {comments} = postInfo;
 
-  console.log(`Post Info = ${comments[0].name}`);
+  // console.log(`Post Info = ${comments[0].name}`);
 
   if(postInfo === "userposts") {
     console.log("Entrou no if");

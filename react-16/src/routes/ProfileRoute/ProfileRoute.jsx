@@ -6,6 +6,9 @@ import UserPosts from '../../containers/UserPosts';
 import Loading from '../../components/Loading';
 
 const ProfileRoute = () => {
+  const [users, setUsers] = React.useState([]);
+  const [posts, setPosts] = React.useState([]);
+
   return (
     <div data-testid="profile-route">
       <UserProfile
