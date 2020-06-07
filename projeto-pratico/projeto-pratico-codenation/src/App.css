@@ -137,7 +137,15 @@ body {
   width: 100%;
   font-family: 'Noto Sans SC', sans-serif;
   font-size: 0.9rem;
-  color: hsl(210, 11%, 15%);
+}
+
+.card__price--actual {
+  color:hsl(210, 11%, 15%);
+}
+
+.card__price--regular {
+  text-decoration: line-through;
+  color: rgb(206, 198, 198);
 }
 
 .card__discount{
@@ -152,6 +160,110 @@ body {
   font-weight: 600;
   font-family: 'Noto Sans SC', sans-serif;
 }
+
+/* --------------------------------------------------------------------------------------------------------------------- */
+.product {
+  margin-top: 1rem;
+  display: flex;
+  width: 100%;
+  margin-left: 5rem;
+
+  /* display: grid; */
+  /* padding-top: 1.5rem; */
+  /* Choose the minimum size to be 250px, and if it doens't fit in the screen, move to the following line */
+  /* grid-template-columns: repeat(auto-fit,minmax(200px, 1fr)); */
+  /* flex-wrap: wrap; */
+}
+
+.product__info {
+  /* border: 1px solid; */
+  /* margin-left: 10px; */
+  align-items: left;
+  font-family: 'Noto Sans SC', sans-serif;
+}
+
+.product__image {
+  /* margin-left: 5rem; */
+  /* width: 100%; */
+}
+
+.product__info__name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #212529;
+  text-align: left;
+}
+
+.product__price {
+  display: flex;
+  align-items: center;
+  margin-right: 0.5rem;
+  /* border: 1px solid pink; */
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.product__price--regular {
+  text-decoration: line-through;
+  color: rgb(167, 157, 157);
+}
+
+.product__price--actual {
+  color: #212529;
+}
+
+.product__installment {
+  font-size: 0.77rem;
+  color: rgb(167, 157, 157);
+}
+
+.product__size {
+  /* border: 1px solid; */
+  font-size: 0.85rem;
+  color: rgb(167, 157, 157);
+  text-align: left;
+}
+
+.product__buttons {
+  /* border: 1px solid; */
+  margin-top: 5px;
+}
+
+.product__buttons__btn {
+  margin-right: 0.5rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  font-weight: bold;
+  font-size: 0.95rem;
+  /* text-align: center; */
+  background-color: transparent;
+  border: 1px solid rgb(235, 226, 226);
+  border-radius: 0.3rem;
+  outline: none;
+  cursor: pointer;
+}
+
+.product__buttons__btn:focus {
+  color: white;
+  background-color: #212529;
+}
+
+.product__add {
+  margin-top: 1rem;
+  align-items: left;
+  width: 18rem;
+  height: 2.2rem;
+  font-weight: bold;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 0.3rem;
+  outline: none;
+  cursor: pointer;
+  color: white;
+  background-color: #212529;
+}
+
+.product__add__btn {}
 
 /* .App-link {
   color: #61dafb;

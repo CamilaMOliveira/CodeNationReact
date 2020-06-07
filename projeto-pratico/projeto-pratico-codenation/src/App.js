@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import Cards from "./components/Cards";
 import Search from "./components/Search";
 import Cart from "./components/Cart";
+import Product from "./components/Product";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 
 /* BEM CSS => block__element--modifier 
@@ -23,6 +24,7 @@ export default function App () {
             <Route exact path="/" component={Cards} />
             <Route path="/search" component={Search} />
             <Route path="/cart" component={Cart} />
+            <Route path="/product/:item" component={Product} />
         </Switch>
         </Router>
       </div>
