@@ -5,8 +5,8 @@ import { useParams } from "react-router";
 
 function Product () {
   let discount = 1;
-  // const { name } = useParams();
-  // console.log(`Name = ${name}`);
+  const { name } = useParams();
+  console.log(`Name = ${name}`);
   return (
     <div class="product">
       <img class="product__image" src="https://d3l7rqep7l31az.cloudfront.net/images/products/20001786_594_catalog_1.jpg?1449159646" alt="calca"></img>
