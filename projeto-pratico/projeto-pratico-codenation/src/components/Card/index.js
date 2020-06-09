@@ -16,11 +16,11 @@ function Card ({item}) {
   const dispatch = useDispatch();
   const { data } = useSelector(state => state);
 
-  React.useEffect(() => {
-    console.log("Card componentDidMount");
-    dispatch(setItem(item.name));
-    // dispatch(getData());
-  }, [dispatch, item.name]);
+  // React.useEffect(() => {
+  //   console.log("Card componentDidMount");
+  //   dispatch(setItem(item.name));
+  //   // dispatch(getData());
+  // }, [dispatch, item.name]);
 
   console.log(`Str replaced with dashes = ${nameDashed}`);
 
