@@ -22,7 +22,9 @@ function Card ({item}) {
   //   // dispatch(getData());
   // }, [dispatch, item.name]);
 
-  console.log(`Str replaced with dashes = ${nameDashed}`);
+  // console.log(`Entrou em CARD`);
+
+  // console.log(`Str replaced with dashes = ${nameDashed}`);
 
   if(item.discount_percentage !== "") {
     discount = 1;
