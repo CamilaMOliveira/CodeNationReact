@@ -2,9 +2,27 @@ import React from 'react';
 import '../../App.css';
 import 'font-awesome/css/font-awesome.min.css';
 import { Link, useParams } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+
+import {
+  getData,
+  setData,
+  setItem
+} from "../../action";
 
 function Card ({item}) {
   let discount = 0;
+  let nameDashed = item.name.replace(/ /g, "-");
+  const dispatch = useDispatch();
+  const { data } = useSelector(state => state);
+
+  React.useEffect(() => {
+    console.log("Card componentDidMount");
+    dispatch(setItem(item.name));
+    // dispatch(getData());
+  }, [dispatch, item.name]);
+
+  console.log(`Str replaced with dashes = ${nameDashed}`);
 
   if(item.discount_percentage !== "") {
     discount = 1;

@@ -2,46 +2,94 @@ import React from 'react';
 import '../../App.css';
 import 'font-awesome/css/font-awesome.min.css';
 import { useParams } from "react-router";
+import { useSelector, useDispatch } from "react-redux";
+
+import {
+  getData,
+  setData,
+  setItem
+} from "../../action";
 
 function Product () {
-  let discount = 1;
+  let discount = 0;
   const { name } = useParams();
+  const dispatch = useDispatch();
+  const { data, item } = useSelector(state => state);
+
+  // let nameSpace = name.replace(/-/g, " ");
+
   console.log(`Name = ${name}`);
-  return (
-    <div class="product">
-      <img class="product__image" src="https://d3l7rqep7l31az.cloudfront.net/images/products/20001786_594_catalog_1.jpg?1449159646" alt="calca"></img>
-      {/* <div className="product__discount">15% OFF </div> */}
-      <div class="product__info">
-        <div class="product__info__name">CALÇA COMFORT TASSEL</div>
-        <div class="product__price">
-          {
-            (discount === 1) ?
-              <p class="product__price product__price--regular">R$ 139,90</p>
-              :
-              ""
-          }
-          <p class="product__price product__price--actual">R$ 84,90</p>
-          <p class="product__installment">em até 2x R$ 42,45</p>
-          {
-            (discount === 1) ?
-            <p class="product__discount">(15% OFF)</p>
-              :
-              ""
-          }
-        </div>
-        <div class="product__size">
-          Escolha o tamanho
-          <div class="product__buttons">
-            <button class="product__buttons__btn">36</button>
-            <button class="product__buttons__btn">38</button>
-            <button class="product__buttons__btn">40</button>
-            <button class="product__buttons__btn">42</button>
+
+  React.useEffect(() => {
+    console.log("Product componentDidMount");
+    dispatch(setItem(name));
+  }, [dispatch, name]);
+
+
+  console.log(`Product data = ${JSON.stringify(data)}`);
+  if(item !== undefined)
+    console.log(`Product Item = ${item.name}`);
+
+  if(item !== undefined) {
+
+    if(item.discount_percentage !== "") {
+      discount = 1;
+    }
+
+    let strsize = JSON.stringify(item.sizes);
+    console.log(`Sizes = ${strsize}`);
+
+    return (
+      <div className="product">
+        {
+          (item.image !== "") ?
+            <img className="product__image" src={item.image} alt={item.name}></img>
+            :
+            <img className="product__image" src="https://via.placeholder.com/470x594/FFFFFF/?text=Imagem+Indispon%C3%ADvel" alt={item.name}/>
+        }
+        <div className="product__info">
+          <div className="product__info__name">{item.name}</div>
+          <div className="product__price">
+            {
+              (discount === 1) ?
+                <p className="product__price product__price--regular">{item.regular_price}</p>
+                :
+                ""
+            }
+            <p className="product__price product__price--actual">{item.actual_price}</p>
+            <p className="product__installment">em até {item.installments}</p>
+            {
+              (discount === 1) ?
+              <p className="product__discount">({item.discount_percentage} OFF)</p>
+                :
+                ""
+            }
           </div>
-          <button class="product__add">Adicionar à sacola</button>
+          <div className="product__size">
+            Escolha o tamanho
+            <div className="product__buttons">
+              {
+                (item.sizes !== undefined) ?
+                  item.sizes.map(size => {
+                    if(size.available) {
+                      console.log(`Size = available`);
+                      return (
+                        <button className="product__buttons__btn">{size.size}</button>
+                      );
+                    }
+                  })
+                  :
+                  null
+              }
+            </div>
+            <button className="product__add">Adicionar à sacola</button>
+          </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  }
+
+  return null;
 }
 
 export default Product;

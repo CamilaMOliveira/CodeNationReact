@@ -8,12 +8,15 @@ import { useSelector, useDispatch } from "react-redux";
 
 import {
   getData,
-  setData
+  setData,
+  setItem
 } from "../../action";
+
+let global = 0;
 
 function Cards () {
   const dispatch = useDispatch();
-  const { data } = useSelector(state => state);
+  const { data, item } = useSelector(state => state);
 
   React.useEffect(() => {
     console.log("componentDidMount");
@@ -31,6 +34,14 @@ function Cards () {
 
   console.log("Data = ");
   console.log(data);
+  // console.log(data[0]);
+
+  // if(global === 0) {
+  //   dispatch(setItem("VESTIDO TRANSPASSE BOW"));
+  //   global = 1;
+  // }
+
+  // console.log(`Item = ${item}`);
 
   return (
     <section className="cards">

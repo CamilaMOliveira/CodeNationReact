@@ -31,7 +31,7 @@ export default function App () {
             <Route exact path="/" component={Cards} />
             <Route path="/search" component={Search} />
             <Route path="/cart" component={Cart} />
-            <Route path="/product/:item" component={Product} />
+            <Route path="/product/:name" component={Product} />
         </Switch>
         </Router>
       </div>
