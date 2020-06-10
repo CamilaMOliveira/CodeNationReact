@@ -7,11 +7,15 @@ import { useSelector, useDispatch } from "react-redux";
 import {
   getData,
   setData,
-  setItem
+  setItem,
+  updateCart
 } from "../../action";
+
+// let countItems = 0;
 
 function Product () {
   let discount = 0;
+  let countItems = 0;
   const { name } = useParams();
   const dispatch = useDispatch();
   const { data, item } = useSelector(state => state);
@@ -26,7 +30,7 @@ function Product () {
   }, [dispatch, name]);
 
 
-  console.log(`Product data = ${JSON.stringify(data)}`);
+  // console.log(`Product data = ${JSON.stringify(data)}`);
   if(item !== undefined)
     console.log(`Product Item = ${item.name}`);
 
@@ -82,7 +86,14 @@ function Product () {
                   null
               }
             </div>
-            <button className="product__add">Adicionar à sacola</button>
+            <button className="product__add" onClick={() => {
+              countItems++;
+              console.log(`OnClick Product ADD => ${countItems}`);
+              dispatch(updateCart(item));
+            }
+            }>
+              Adicionar à sacola
+            </button>
           </div>
         </div>
       </div>
