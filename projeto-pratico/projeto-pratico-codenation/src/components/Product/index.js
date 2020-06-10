@@ -11,11 +11,10 @@ import {
   updateCart
 } from "../../action";
 
-// let countItems = 0;
-
 function Product () {
   let discount = 0;
-  let countItems = 0;
+  let chosenSize = -1;
+  let chooseSize = 0;
   const { name } = useParams();
   const dispatch = useDispatch();
   const { data, item } = useSelector(state => state);
@@ -78,7 +77,12 @@ function Product () {
                     if(size.available) {
                       console.log(`Size = available`);
                       return (
-                        <button className="product__buttons__btn">{size.size}</button>
+                        <button className="product__buttons__btn" onClick={() => {
+                          chosenSize = size.size;
+                        }
+                        }>
+                          {size.size}
+                        </button>
                       );
                     }
                   })
@@ -87,13 +91,24 @@ function Product () {
               }
             </div>
             <button className="product__add" onClick={() => {
-              countItems++;
-              console.log(`OnClick Product ADD => ${countItems}`);
-              dispatch(updateCart(item));
+              if(chosenSize === -1) {
+                chooseSize = 1;
+                console.log(`Usuario nao escolheu um tamanho`);
+                alert("Você precisa escolher um tamanho.");
+              } else {
+                console.log(`Usuario clicou em = ${chosenSize}`);
+                dispatch(updateCart(item, chosenSize));
+              }
             }
             }>
               Adicionar à sacola
             </button>
+            {/* {
+              (chooseSize === 1) ?
+                <div>Voce precisa escolher um tamanho.</div>
+                :
+                ""
+            } */}
           </div>
         </div>
       </div>
