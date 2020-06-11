@@ -8,7 +8,7 @@ import {
   getData,
   setData,
   setItem,
-  updateCart
+  addProduct
 } from "../../action";
 
 function Product () {
@@ -97,7 +97,7 @@ function Product () {
                 alert("Você precisa escolher um tamanho.");
               } else {
                 console.log(`Usuario clicou em = ${chosenSize}`);
-                dispatch(updateCart(item, chosenSize));
+                dispatch(addProduct(item, chosenSize));
               }
             }
             }>

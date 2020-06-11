@@ -4,37 +4,30 @@ import 'font-awesome/css/font-awesome.min.css';
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
+import CartProduct from "../CartProduct";
+
 function Cart () {
-  const { cartTotalItems, cart } = useSelector(state => state);
+  const { cartTotalItems, cartTotalPrice, cart } = useSelector(state => state);
   return (
-    <section className="">
-      <h1> CART TOTAL ITEMS = {cartTotalItems}</h1>
-      {
-        cart.map(product => {
-          console.log(`PRODUCT = ${product.item.name}`);
-          console.log(`PRODUCT AMOUNT = ${product.count_item}`);
-          return(
-            <section>
-              <h2> PRODUCT = {product.item.name}</h2>
-              <h2> PRODUCT AMOUNT = {product.count_item}</h2>
-            </section>
-          );
-        })
-      }
-    </section>
+    <div className="cart">
+      <div className="cart__info">
+        <div className="cart__total">Sacola de Compras ({cartTotalItems})</div>
+        <div className="cart__total">Total: R$ {cartTotalPrice}</div>
+      </div>
+      <div className="cards">
+        {
+          cart.map(product => {
+            console.log(`PRODUCT = ${product.item.name}`);
+            console.log(`PRODUCT AMOUNT = ${product.count_item}`);
+            console.log(`PRODUCT SIZE = ${product.size}`);
+            return(
+              <CartProduct product={product}/>
+            );
+          })
+        }
+      </div>
+    </div>
   );
-  // return (
-  //   <h1> CART TOTAL ITEMS = {cartTotalItems}</h1>
-  //   <section>
-  //     {
-  //       cart.map(product => {
-  //         return(
-  //           <div item={item}/>
-  //         );
-  //       })
-  //     }
-  //   </section>
-  // );
 }
 
 export default Cart;

@@ -104,6 +104,7 @@ body {
   * in order for the card discount to appear
   * in the correct bottom left position */
   /* border: 1px solid pink; */
+  /* border: 2px solid #dfdfdf; */
   position: relative;
   margin: 0.2rem;
   margin-bottom: 1.5rem;
@@ -120,8 +121,10 @@ body {
 
 .card__image {
   /* border: 5px solid black; */
+  /* border: 1px solid #f3f2f2; */
   position: relative;
   width: 100%;
+  max-width: 400px;
   border-radius: 2%;
 }
 
@@ -302,6 +305,113 @@ body {
   color: #b7b7b7;
   opacity: 1; /* Firefox */
 }
+
+/* --------------------------------------------------------------------------------------------------------------------- */
+.cart {
+  /* border: 1px solid black; */
+  padding-top: 1.5rem;
+  width: 100%;
+  margin: 0 auto;
+  font-family: 'Noto Sans SC', sans-serif;
+}
+
+.cart__card {
+  /* We need to set position relative here
+  * in order for the card discount to appear
+  * in the correct bottom left position */
+  /* border: 1px solid pink; */
+  border-radius: 1%;
+  position: relative;
+  margin: 0.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.cart__card__image {
+  border: 1px solid #f3f2f2;
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 2%;
+}
+
+.cart__info {
+  /* border: 1px solid pink; */
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.cart__total {
+  /* border: 1px solid blue; */
+  /* width: 70%; */
+  font-size: 1rem;
+  font-weight: 600;
+  color: #3f4144;
+  text-align: left;
+  justify-content: center;
+  margin: 0 auto;
+  /* margin-left: 10rem; */
+}
+
+.cart__price {
+  /* border: 1px solid black; */
+  display: flex;
+  width: 70%;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart__price__actual {
+  color: #212529;
+  margin-right: 0.5rem;
+}
+
+.cart__installment {
+  font-size: 0.77rem;
+  color: #3f474e; /* rgb(167, 157, 157); */
+}
+
+.cart__button {
+  min-width: 1.5rem;
+  color: #212529;
+  background-color: white;
+  border-color: #212529;
+  outline: none;
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 0.5rem;
+}
+
+.cart__button:hover {
+  color: white;
+  background-color: #212529;
+}
+
+.cart__quantity {
+  /* border: 1px solid black; */
+  display: flex;
+  width: 70%;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart__product__quantity {
+  color: #212529;
+  /* margin-right: 0.5rem; */
+}
+
+.cart__remove {
+  border: none;
+  color: #cf3838;
+  background-color: transparent;
+  /* border-color: #212529; */
+  outline: none;
+  cursor: pointer;
+  font-size: 0.77rem;
+}
+
 /* .App-link {
   color: #61dafb;
 } */
