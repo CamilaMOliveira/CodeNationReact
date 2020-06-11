@@ -12,7 +12,8 @@ function Cart () {
     <div className="cart">
       <div className="cart__info">
         <div className="cart__total">Sacola de Compras ({cartTotalItems})</div>
-        <div className="cart__total">Total: R$ {cartTotalPrice}</div>
+        {/* Fix the price to have two values after dot => 199.90 */}
+        <div className="cart__total">Total: R$ {cartTotalPrice.toFixed(2)}</div>
       </div>
       <div className="cards">
         {
