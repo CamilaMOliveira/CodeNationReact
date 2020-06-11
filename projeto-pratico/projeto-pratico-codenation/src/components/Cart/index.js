@@ -1,8 +1,7 @@
 import React from 'react';
 import '../../App.css';
 import 'font-awesome/css/font-awesome.min.css';
-import { Link } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 
 import CartProduct from "../CartProduct";
 
@@ -28,10 +27,7 @@ function Cart () {
       <div className="cards">
         {
           cart.map(product => {
-            console.log(`PRODUCT = ${product.item.name}`);
-            console.log(`PRODUCT AMOUNT = ${product.count_item}`);
-            console.log(`PRODUCT SIZE = ${product.size}`);
-            return(
+            return (
               <CartProduct product={product}/>
             );
           })

@@ -5,8 +5,6 @@ import { useParams } from "react-router";
 import { useSelector, useDispatch } from "react-redux";
 
 import {
-  getData,
-  setData,
   setItem,
   addProduct
 } from "../../action";
@@ -14,35 +12,24 @@ import {
 function Product () {
   let discount = 0;
   let chosenSize = -1;
-  let chooseSize = 0;
   const { name } = useParams();
   const dispatch = useDispatch();
-  const { data, item } = useSelector(state => state);
+  const { item } = useSelector(state => state);
 
   /* Replace back "_" in the name of the item with spaces so that
   we can treat the item according to its name in the JSON API */
   let nameSpace = name.replace(/_/g, " ").toUpperCase();
-
-  console.log(`Name = ${nameSpace}`);
 
   React.useEffect(() => {
     console.log("Product componentDidMount");
     dispatch(setItem(nameSpace));
   }, [dispatch, nameSpace]);
 
-
-  // console.log(`Product data = ${JSON.stringify(data)}`);
-  if(item !== undefined)
-    console.log(`Product Item = ${item.name}`);
-
   if(item !== undefined) {
 
     if(item.discount_percentage !== "") {
       discount = 1;
     }
-
-    let strsize = JSON.stringify(item.sizes);
-    console.log(`Sizes = ${strsize}`);
 
     return (
       <div className="product">
@@ -94,7 +81,6 @@ function Product () {
             </div>
             <button className="product__add" onClick={() => {
               if(chosenSize === -1) {
-                chooseSize = 1;
                 console.log(`Usuario nao escolheu um tamanho`);
                 alert("Você precisa escolher um tamanho.");
                 return (
@@ -107,13 +93,6 @@ function Product () {
             }}>
               Adicionar à sacola
             </button>
-            {/* <div>teste</div> */}
-            {/* {
-              (chosenSize === -1) ?
-              console.log(`Deveria criar div agora`)
-                :
-                ""
-            } */}
           </div>
         </div>
       </div>

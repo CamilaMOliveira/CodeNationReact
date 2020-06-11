@@ -1,27 +1,11 @@
 import React from 'react';
 import '../../App.css';
 import 'font-awesome/css/font-awesome.min.css';
-
-import Card from "../Card";
 import SearchCard from "../SearchCard";
-
 import { useSelector, useDispatch } from "react-redux";
 
-import {
-  getData,
-  setData,
-  setSearch
-} from "../../action";
-
 function SearchCards ({result}) {
-  const dispatch = useDispatch();
-  const { data, item, search } = useSelector(state => state);
-
-  React.useEffect(() => {
-    console.log("componentDidMount");
-
-    dispatch(getData());
-  }, [dispatch]);
+  const { search } = useSelector(state => state);
 
   console.log(`SearchCards = ${result}`);
 

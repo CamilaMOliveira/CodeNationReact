@@ -5,21 +5,14 @@ import { Link, useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
 import {
-  getData,
-  setData,
-  setItem,
   addProduct,
   decrementProduct,
   removeProduct
 } from "../../action";
 
 function CartProduct ({product}) {
-  let discount = 0;
   const dispatch = useDispatch();
 
-  if(product.item.discount_percentage !== "") {
-    discount = 1;
-  }
   return (
       <div className="cart__card">
           {
@@ -45,8 +38,6 @@ function CartProduct ({product}) {
             </button>
             <div className="cart__product__quantity">{product.count_item}</div>
             <button className="cart__button" onClick={() => {
-              console.log(`CLIQUE NO MAIS (NAME) => ${product.item.name}`);
-              console.log(`CLIQUE NO MAIS (SIZE) => ${product.size}`);
               dispatch(addProduct(product.item, product.size));
               }}>
                 +

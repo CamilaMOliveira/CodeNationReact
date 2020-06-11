@@ -13,24 +13,7 @@ body {
   background-color: #f9f9f9;
 }
 
-/* .App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-} */
-
-/* @media (min-width: 600px) {
-  .cards { grid-template-columns: repeat(4, 1fr); }
-} */
-
 .App-header {
-  /* padding-top: 0.5rem; */
-  /* padding-bottom: 0.5rem; */
   background-color: white;
   border-bottom: 2px solid #dfdfdf;
   width: 100%;
@@ -42,7 +25,6 @@ body {
 }
 
 .App-nav {
-  /* border: 3px solid black; */
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -55,16 +37,13 @@ body {
 
 .App-nav__title {
   font-family: 'Cookie', cursive;
-  /* border: 1px solid black; */
   font-size: 3rem; /* 1rem = 16px */
   text-decoration: none;
-  /* margin-left: 5rem; */
   color: black;
 }
 
 .App-nav__icons {
   display: flex;
-  /* margin-right: 5rem; */
   color: black;
 }
 
@@ -87,7 +66,6 @@ body {
 /* --------------------------------------------------------------------------------------------------------------------- */
 
 .cards {
-  /* border: 5px solid pink; */
   position: relative;
   width: 85%;
   display: grid;
@@ -103,8 +81,6 @@ body {
   /* We need to set position relative here
   * in order for the card discount to appear
   * in the correct bottom left position */
-  /* border: 1px solid pink; */
-  /* border: 2px solid #dfdfdf; */
   position: relative;
   margin: 0.2rem;
   margin-bottom: 1.5rem;
@@ -114,14 +90,11 @@ body {
   /* We need to set position relative here
   * in order for the card discount to appear
   * in the correct bottom left position */
-  /* border: 5px solid green; */
   position: relative;
   text-decoration: none;
 }
 
 .card__image {
-  /* border: 5px solid black; */
-  /* border: 1px solid #f3f2f2; */
   position: relative;
   width: 100%;
   max-width: 400px;
@@ -166,14 +139,8 @@ body {
 
 /* --------------------------------------------------------------------------------------------------------------------- */
 .product {
-  /* margin-top: 1rem; */
-  /* display: flex; */
   width: 80%;
-  /* height: 100%;
-   */
   position: relative;
-  /* margin-left: 5rem; */
-
   display: grid;
   padding-top: 1.5rem;
   /* Choose the minimum size to be 250px, and if it doens't fit in the screen, move to the following line */
@@ -184,15 +151,12 @@ body {
 }
 
 .product__info {
-  /* border: 1px solid; */
   margin-left: 1rem;
   align-items: left;
   font-family: 'Noto Sans SC', sans-serif;
-  /* width: 50%; */
 }
 
 .product__image {
-  /* margin-left: 5rem; */
   position: relative;
   width: 100%;
 }
@@ -208,7 +172,6 @@ body {
   display: flex;
   align-items: center;
   margin-right: 0.5rem;
-  /* border: 1px solid pink; */
   font-size: 0.9rem;
   font-weight: 600;
 }
@@ -236,14 +199,12 @@ body {
 }
 
 .product__size {
-  /* border: 1px solid black; */
   font-size: 0.85rem;
   color: rgb(167, 157, 157);
   text-align: left;
 }
 
 .product__buttons {
-  /* border: 1px solid; */
   margin-top: 5px;
 }
 
@@ -253,7 +214,6 @@ body {
   height: 2.2rem;
   font-weight: bold;
   font-size: 0.95rem;
-  /* text-align: center; */
   background-color: transparent;
   border: 1px solid rgb(235, 226, 226);
   border-radius: 0.3rem;
@@ -292,7 +252,6 @@ body {
 /* --------------------------------------------------------------------------------------------------------------------- */
 .search {
   padding-top: 1.5rem;
-  /* border: 1px solid black; */
   width: 100%;
 }
 
@@ -316,10 +275,8 @@ body {
 }
 
 .search__card__discount{
-  /* border: 3px solid blue; */
   position: relative;
   color: black;
-  /* bottom: 20%; */
   width: 10%;
   background-color: rgb(58, 57, 57);
   color: white;
@@ -332,7 +289,6 @@ body {
 
 /* --------------------------------------------------------------------------------------------------------------------- */
 .cart {
-  /* border: 1px solid black; */
   padding-top: 1.5rem;
   width: 100%;
   margin: 0 auto;
@@ -343,7 +299,6 @@ body {
   /* We need to set position relative here
   * in order for the card discount to appear
   * in the correct bottom left position */
-  /* border: 1px solid pink; */
   border-radius: 1%;
   position: relative;
   margin: 0.2rem;
@@ -359,34 +314,27 @@ body {
 }
 
 .cart__empty {
-  /* border: 1px solid black; */
-  /* height: 100px; */
   margin-top: 15%;
   justify-content: center;
   color: #b7b7b7;
 }
 
 .cart__info {
-  /* border: 1px solid pink; */
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
 
 .cart__total {
-  /* border: 1px solid blue; */
-  /* width: 70%; */
   font-size: 1rem;
   font-weight: 600;
   color: #3f4144;
   text-align: left;
   justify-content: center;
   margin: 0 auto;
-  /* margin-left: 10rem; */
 }
 
 .cart__price {
-  /* border: 1px solid black; */
   display: flex;
   width: 70%;
   margin: 0 auto;
@@ -401,7 +349,7 @@ body {
 
 .cart__installment {
   font-size: 0.77rem;
-  color: #3f474e; /* rgb(167, 157, 157); */
+  color: #3f474e;
 }
 
 .cart__button {
@@ -421,7 +369,6 @@ body {
 }
 
 .cart__quantity {
-  /* border: 1px solid black; */
   display: flex;
   width: 70%;
   margin: 0 auto;
@@ -431,28 +378,13 @@ body {
 
 .cart__product__quantity {
   color: #212529;
-  /* margin-right: 0.5rem; */
 }
 
 .cart__remove {
   border: none;
   color: #cf3838;
   background-color: transparent;
-  /* border-color: #212529; */
   outline: none;
   cursor: pointer;
   font-size: 0.77rem;
 }
-
-/* .App-link {
-  color: #61dafb;
-} */
-
-/* @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */

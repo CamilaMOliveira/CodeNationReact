@@ -1,8 +1,7 @@
 import React from 'react';
 import '../../App.css';
 import 'font-awesome/css/font-awesome.min.css';
-import { Link, useParams } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 
 function Card ({item}) {
   let discount = 0;

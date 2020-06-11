@@ -1,14 +1,13 @@
 import React from 'react';
 import '../../App.css';
 import 'font-awesome/css/font-awesome.min.css';
-import { Link, useParams } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 
 function SearchCard ({item}) {
-  let discount = 0;
   /* Replace spaces in the name of the item with "_" so that
   the link won't contain spaces */
   let nameDashed = item.name.replace(/ /g, "_").toLowerCase();
+  let discount = 0;
 
   if(item.discount_percentage !== "") {
     discount = 1;
@@ -45,8 +44,7 @@ function SearchCard ({item}) {
             /* Else, don't display any discount price */
             ""
         )
-      } 
-      {/* search__card__discount */}
+      }
     </Link>
   </div>
   );

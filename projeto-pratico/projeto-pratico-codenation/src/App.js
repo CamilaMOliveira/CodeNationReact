@@ -7,14 +7,7 @@ import Cards from "./components/Cards";
 import Search from "./components/Search";
 import Cart from "./components/Cart";
 import Product from "./components/Product";
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
-
-// import { useSelector, useDispatch } from "react-redux";
-
-// import {
-//   getData,
-//   setData
-// } from "./action";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 /* BEM CSS => block__element--modifier 
   * Block: The outermost parent element of the component is defined as the block.
