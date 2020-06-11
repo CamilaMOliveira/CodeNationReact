@@ -21,7 +21,6 @@ function Product () {
   let nameSpace = name.replace(/_/g, " ").toUpperCase();
 
   React.useEffect(() => {
-    console.log("Product componentDidMount");
     dispatch(setItem(nameSpace));
   }, [dispatch, nameSpace]);
 
@@ -64,7 +63,6 @@ function Product () {
                 (item.sizes !== undefined) ?
                   item.sizes.map(size => {
                     if(size.available) {
-                      console.log(`Size = available`);
                       return (
                         <button className="product__buttons__btn" onClick={() => {
                           chosenSize = size.size;
@@ -81,13 +79,11 @@ function Product () {
             </div>
             <button className="product__add" onClick={() => {
               if(chosenSize === -1) {
-                console.log(`Usuario nao escolheu um tamanho`);
                 alert("Você precisa escolher um tamanho.");
                 return (
                   <div className="product__size">Voce precisa escolher um tamanho.</div>
                 );
               } else {
-                console.log(`Usuario clicou em = ${chosenSize}`);
                 dispatch(addProduct(item, chosenSize));
               }
             }}>

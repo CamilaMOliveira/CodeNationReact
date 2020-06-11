@@ -7,8 +7,6 @@ import { useSelector } from "react-redux";
 function SearchCards ({result}) {
   const { search } = useSelector(state => state);
 
-  console.log(`SearchCards = ${result}`);
-
   return (
     <section className="cards">
     {

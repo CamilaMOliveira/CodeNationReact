@@ -15,8 +15,6 @@ function Cards () {
   const { data } = useSelector(state => state);
 
   React.useEffect(() => {
-    console.log("componentDidMount");
-
     fetch("https://5e9935925eabe7001681c856.mockapi.io/api/v1/catalog")
     .then(response => response.json()) /* Return a promise */
     .then(result => {

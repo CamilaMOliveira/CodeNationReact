@@ -11,8 +11,6 @@ function reducer(state = INITIAL_STATE, action) {
   switch (action.type) {
 
     case "GET_DATA":
-      console.log(`GET_DATA`);
-      console.log(`state = ${{...state}}`);
       return {
         ...state
       };
@@ -24,20 +22,17 @@ function reducer(state = INITIAL_STATE, action) {
         };
 
       case "SET_ITEM":
-        console.log(`SET ITEM => ${action.payload}`);
         return {
           ...state,
           item: state.data.find(product => product.name === action.payload),
         }
 
         case "SET_SEARCH":
-          console.log(`SET SEARCH => ${action.payload}`);
           let searchResults = [];
           state.data.map(product => {
             /* If what the user searched, exists in any product */
             if(product.name.toLowerCase().indexOf(action.payload.toLowerCase()) !== -1){
               /* Let's update the list of searched products */
-              console.log(`Resultado da busca ACTION = ${JSON.stringify(product.name)}`);
               searchResults.push(product);
             }
           });
@@ -58,13 +53,11 @@ function reducer(state = INITIAL_STATE, action) {
               &&
               product.size === action.size);
 
-            console.log(`ADD_PRODUCT ACTUAL PRICE => ${(action.payload.actual_price)}`);
             /* Extract the price from "R$ 199,90" for example. Result will be "199,90" */
             actualPrice = action.payload.actual_price.match(/\d+(?:\.\d+)?/g);
             /* Convert this to string in order to replace comma with dots => 199.9 */
             /* And parse this result to Float */
             number = parseFloat(actualPrice.toString().replace(',', '.'));
-            console.log(`ADD_PRODUCT NUMBER PRICE => ${number}`);
 
             if(index === -1) {
               /* It's a new item, let's add it to the cart */
@@ -75,8 +68,6 @@ function reducer(state = INITIAL_STATE, action) {
               state.cart[index].count_item++;
               state.cart[index].total_price+=number;
             }
-
-            console.log(`ADD_PRODUCT CART => ${JSON.stringify(state.cart)}`);
 
             return {
               ...state,
@@ -119,9 +110,6 @@ function reducer(state = INITIAL_STATE, action) {
                   product.item.name === action.payload.name
                   &&
                   product.size === action.size);
-                console.log(`REMOVE_PRODUCT Name => ${action.payload.name}`);
-                console.log(`REMOVE_PRODUCT Size => ${JSON.stringify(action.size)}`);
-                console.log(`REMOVE_PRODUCT CART ATUAL => ${JSON.stringify(state.cart)}`);
 
                 return {
                   ...state,
