@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../App.css';
+import './search.css';
 import 'font-awesome/css/font-awesome.min.css';
 import SearchCards from "../SearchCards";
 

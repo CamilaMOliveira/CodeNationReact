@@ -1,8 +1,9 @@
 import React from 'react';
-import '../../App.css';
+import '../Product/product.css';
+import '../Card/card.css';
+import '../Cart/cart.css';
 import 'font-awesome/css/font-awesome.min.css';
-import { Link, useParams } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 
 import {
   addProduct,

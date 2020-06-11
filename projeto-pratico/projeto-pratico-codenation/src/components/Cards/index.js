@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../App.css';
+import './cards.css';
 import 'font-awesome/css/font-awesome.min.css';
 
 import Card from "../Card";
@@ -7,12 +7,8 @@ import Card from "../Card";
 import { useSelector, useDispatch } from "react-redux";
 
 import {
-  getData,
   setData,
-  setItem
 } from "../../action";
-
-let global = 0;
 
 function Cards () {
   const dispatch = useDispatch();

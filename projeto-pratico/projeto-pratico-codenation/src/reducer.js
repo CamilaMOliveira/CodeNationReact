@@ -4,8 +4,7 @@ const INITIAL_STATE = {
   search: [],
   cart: [],
   cartTotalItems: 0,
-  cartTotalPrice: 0,
-  // original_data: []
+  cartTotalPrice: 0
 };
 
 function reducer(state = INITIAL_STATE, action) {
@@ -22,7 +21,6 @@ function reducer(state = INITIAL_STATE, action) {
         return {
           ...state,
           data: action.payload,
-          // original_data: action.payload
         };
 
       case "SET_ITEM":

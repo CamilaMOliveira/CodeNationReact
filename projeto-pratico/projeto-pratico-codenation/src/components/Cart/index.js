@@ -1,5 +1,6 @@
 import React from 'react';
-import '../../App.css';
+import './cart.css';
+import '../Cards/cards.css';
 import 'font-awesome/css/font-awesome.min.css';
 import { useSelector } from "react-redux";
 

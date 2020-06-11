@@ -1,8 +1,8 @@
 import React from 'react';
-import '../../App.css';
+import '../Cards/cards.css';
 import 'font-awesome/css/font-awesome.min.css';
 import SearchCard from "../SearchCard";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 
 function SearchCards ({result}) {
   const { search } = useSelector(state => state);

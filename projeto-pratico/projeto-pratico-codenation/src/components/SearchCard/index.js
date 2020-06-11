@@ -1,5 +1,6 @@
 import React from 'react';
-import '../../App.css';
+import '../Card/card.css';
+import '../Product/product.css';
 import 'font-awesome/css/font-awesome.min.css';
 import { Link } from "react-router-dom";
 

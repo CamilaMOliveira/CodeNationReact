@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../App.css';
+import './product.css';
 import 'font-awesome/css/font-awesome.min.css';
 import { useParams } from "react-router";
 import { useSelector, useDispatch } from "react-redux";
