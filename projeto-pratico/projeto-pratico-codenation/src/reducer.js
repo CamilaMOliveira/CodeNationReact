@@ -116,7 +116,6 @@ function reducer(state = INITIAL_STATE, action) {
 
               case "REMOVE_PRODUCT":
                 let removeIndex;
-                let totalProductPrice = 0;
                 /* Get index from the item we want to remove */
                 removeIndex = state.cart.findIndex(product => 
                   product.item.name === action.payload.name
@@ -125,10 +124,6 @@ function reducer(state = INITIAL_STATE, action) {
                 console.log(`REMOVE_PRODUCT Name => ${action.payload.name}`);
                 console.log(`REMOVE_PRODUCT Size => ${JSON.stringify(action.size)}`);
                 console.log(`REMOVE_PRODUCT CART ATUAL => ${JSON.stringify(state.cart)}`);
-
-                totalProductPrice = (state.cart[removeIndex].count_item * action.payload.actual_price);
-
-                console.log(`totalProductPrice => ${totalProductPrice}`);
 
                 return {
                   ...state,

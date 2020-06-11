@@ -19,14 +19,16 @@ function Product () {
   const dispatch = useDispatch();
   const { data, item } = useSelector(state => state);
 
-  // let nameSpace = name.replace(/-/g, " ");
+  /* Replace back "_" in the name of the item with spaces so that
+  we can treat the item according to its name in the JSON API */
+  let nameSpace = name.replace(/_/g, " ").toUpperCase();
 
-  console.log(`Name = ${name}`);
+  console.log(`Name = ${nameSpace}`);
 
   React.useEffect(() => {
     console.log("Product componentDidMount");
-    dispatch(setItem(name));
-  }, [dispatch, name]);
+    dispatch(setItem(nameSpace));
+  }, [dispatch, nameSpace]);
 
 
   // console.log(`Product data = ${JSON.stringify(data)}`);
@@ -95,17 +97,20 @@ function Product () {
                 chooseSize = 1;
                 console.log(`Usuario nao escolheu um tamanho`);
                 alert("Você precisa escolher um tamanho.");
+                return (
+                  <div className="product__size">Voce precisa escolher um tamanho.</div>
+                );
               } else {
                 console.log(`Usuario clicou em = ${chosenSize}`);
                 dispatch(addProduct(item, chosenSize));
               }
-            }
-            }>
+            }}>
               Adicionar à sacola
             </button>
+            {/* <div>teste</div> */}
             {/* {
-              (chooseSize === 1) ?
-                <div>Voce precisa escolher um tamanho.</div>
+              (chosenSize === -1) ?
+              console.log(`Deveria criar div agora`)
                 :
                 ""
             } */}

@@ -4,7 +4,7 @@ import 'font-awesome/css/font-awesome.min.css';
 import { Link, useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
-function Card ({item}) {
+function SearchCard ({item}) {
   let discount = 0;
   /* Replace spaces in the name of the item with "_" so that
   the link won't contain spaces */
@@ -26,16 +26,6 @@ function Card ({item}) {
         )
       }
 
-      {
-        (
-          (discount === 1) ?
-            /* If the outfit has a discount to be applied, display it */
-            <div className="card__discount">{item.discount_percentage} OFF </div>
-            :
-            /* Else, don't display any discount price */
-            ""
-        )
-      }
       <div className="card__title">{item.name}</div>
       {
         (discount === 1) ?
@@ -46,9 +36,20 @@ function Card ({item}) {
         ""
       }
       <div className="card__price card__price--actual">{item.actual_price}</div>
+      {
+        (
+          (discount === 1) ?
+            /* If the outfit has a discount to be applied, display it */
+            <div className="product__discount">({item.discount_percentage} OFF)</div>
+            :
+            /* Else, don't display any discount price */
+            ""
+        )
+      } 
+      {/* search__card__discount */}
     </Link>
   </div>
   );
 }
 
-export default Card;
+export default SearchCard;

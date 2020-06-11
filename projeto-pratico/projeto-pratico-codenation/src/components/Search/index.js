@@ -47,7 +47,6 @@ function Search () {
 
   return (
     <div className="search">
-      {/* <h1> SEARCH </h1> */}
       <input className="search__input" type="text" placeholder="O que você procura?"
              onInput={(event) => dispatch(setSearch(event.target.value))}>
       </input>

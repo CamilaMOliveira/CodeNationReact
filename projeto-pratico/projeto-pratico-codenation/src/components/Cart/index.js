@@ -12,9 +12,19 @@ function Cart () {
     <div className="cart">
       <div className="cart__info">
         <div className="cart__total">Sacola de Compras ({cartTotalItems})</div>
-        {/* Fix the price to have two values after dot => 199.90 */}
-        <div className="cart__total">Total: R$ {cartTotalPrice.toFixed(2)}</div>
+        {
+          (cartTotalItems === 0) ?
+            <div className="cart__total">Total: R$ 0.00</div>
+            :
+            <div className="cart__total">Total: R$ {cartTotalPrice.toFixed(2)}</div>
+        }
       </div>
+      {
+        (cartTotalItems === 0) ?
+        <div className="cart__empty"> Sua sacola está vazia :( </div>
+        :
+        ""
+      }
       <div className="cards">
         {
           cart.map(product => {

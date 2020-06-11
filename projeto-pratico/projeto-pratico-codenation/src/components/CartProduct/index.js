@@ -15,17 +15,13 @@ import {
 
 function CartProduct ({product}) {
   let discount = 0;
-  let nameDashed = product.item.name.replace(/ /g, "-");
   const dispatch = useDispatch();
-  // const { data } = useSelector(state => state);
 
   if(product.item.discount_percentage !== "") {
     discount = 1;
   }
   return (
-    // <div className="cart__cards">
       <div className="cart__card">
-        {/* <Link to={`/product/${product.item.name}`} className="card__link"> */}
           {
             (
               (product.item.image !== "") ?
@@ -62,7 +58,6 @@ function CartProduct ({product}) {
             Remover item
           </button>
       </div>
-    // </div>
   );
 }
 

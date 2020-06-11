@@ -3,6 +3,7 @@ import '../../App.css';
 import 'font-awesome/css/font-awesome.min.css';
 
 import Card from "../Card";
+import SearchCard from "../SearchCard";
 
 import { useSelector, useDispatch } from "react-redux";
 
@@ -29,7 +30,7 @@ function SearchCards ({result}) {
     {
       search.map(item => {
         return(
-          <Card item={item}/>
+          <SearchCard item={item}/>
         );
       })
     }
