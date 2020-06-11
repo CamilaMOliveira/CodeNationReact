@@ -1,0 +1,59 @@
+.card {
+  /* We need to set position relative here
+  * in order for the card discount to appear
+  * in the correct bottom left position */
+  position: relative;
+  margin: 0.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.card__link {
+  /* We need to set position relative here
+  * in order for the card discount to appear
+  * in the correct bottom left position */
+  position: relative;
+  text-decoration: none;
+}
+
+.card__image {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 2%;
+}
+
+.card__title {
+  width: 100%;
+  font-family: 'Noto Sans SC', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #212529;
+}
+
+.card__price {
+  width: 100%;
+  font-family: 'Noto Sans SC', sans-serif;
+  font-size: 0.9rem;
+}
+
+.card__price--actual {
+  color:hsl(210, 11%, 15%);
+}
+
+.card__price--regular {
+  text-decoration: line-through;
+  color: rgb(206, 198, 198);
+}
+
+.card__discount{
+  position: absolute;
+  color: black;
+  bottom: 20%;
+  width: 15%;
+  background-color: rgb(58, 57, 57);
+  color: white;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-family: 'Noto Sans SC', sans-serif;
+}
