@@ -11,21 +11,21 @@ import './Topbar.scss';
 const Topbar = () => (
   <header data-testid="topbar" className="topbar">
     <div className="container">
-      <a href="/" className="topbar__logo">
+      <Link to="/" className="topbar__logo">
         <LogoSvg/>
-      </a>
+      </Link>
       <div className="topbar__group">
         <div className="topbar__icon">
-          <a href="/users">
+          <Link to="/users">
             <i className="fas fa-users" aria-hidden="true"></i>
             <span>Usuários</span>
-          </a>
+          </Link>
         </div>
         <div className="topbar__icon">
-          <a href="/newuser">
+          <Link to="/newuser">
             <i className="fas fa-user-plus" aria-hidden="true"></i>
             <span>Nova Conta</span>
-          </a>
+          </Link>
         </div>
       </div>
     </div>

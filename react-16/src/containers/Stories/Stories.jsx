@@ -2,6 +2,8 @@ import React, { useState } from "react";
 
 import Story from '../../components/Story';
 
+import { Link } from 'react-router-dom';
+
 import './Stories.scss';
 
 const Stories = ({ stories, getUserHandler }) => {
@@ -15,16 +17,16 @@ const Stories = ({ stories, getUserHandler }) => {
             <img src="https://viniciusvinna.netlify.app/assets//api-instagram/profiles/black-panther/black-panther-profile.jpg" alt="T'Challa"></img>
             </div>
           </button>
-          <a href="/" className="user__thumb">
+          <Link to="/" className="user__thumb">
             <div className="user__thumb__wrapper">
             <img src="https://viniciusvinna.netlify.app/assets//api-instagram/profiles/bruce/bruce-profile.jpg" alt="Bruce Wayne"></img>
             </div>
-          </a>
-          <a href="/" className="user__thumb">
+          </Link>
+          <Link to="/" className="user__thumb">
             <div className="user__thumb__wrapper">
             <img src="https://viniciusvinna.netlify.app/assets//api-instagram/profiles/gamora/gamora-profile.jpg" alt="Gamora"></img>
             </div>
-          </a>
+          </Link>
         </div>
       </section>
 

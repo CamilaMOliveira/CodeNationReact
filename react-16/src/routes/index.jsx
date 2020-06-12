@@ -20,7 +20,7 @@ const Routes = () => (
 
     <Route path="/users/:username">
       {/* ProfileRoute => When we click on a username on a post */}
-      <ProfileRoute/> 
+      <ProfileRoute/>
     </Route>
 
     <Route path="/newuser">

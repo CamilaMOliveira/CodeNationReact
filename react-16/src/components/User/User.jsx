@@ -6,56 +6,17 @@ const User = ({ infoUser })  => {
   const {avatar, name, username, } = "";//infoUser;
 
   return (
-    // Nao precia desta classe users-list quando for preencher os posts
-    // porque tudo ficará dentro de um loop
-    // E este Return já está dentro de uma classe users-list, no aquivo
-    // UsersList.jsx
-    <div data-testid="user" class="users-list">
     <article className="post">
       <header className="post__header">
-        <a href="/users/blackpanther" class="user">
-          <div class="user__thumb">
-            {/* Avatar instead of img src */}
-            <img src="https://viniciusvinna.netlify.app/assets//api-instagram/profiles/black-panther/black-panther-profile.jpg" alt="User Avatar"></img>
+        <Link to={`/users/${infoUser.username}`} className="user">
+          <div className="user__thumb">
+            <img src={infoUser.avatar} alt={infoUser.name}></img>
           </div>
-          <div class="user__name">T'Challa</div>
-        </a>
+          <div className="user__name">{infoUser.name}</div>
+        </Link>
       </header>
     </article>
-    <article className="post">
-    <header className="post__header">
-      <a href="/users/blackpanther" class="user">
-        <div class="user__thumb">
-          {/* Avatar instead of img src */}
-          <img src="https://viniciusvinna.netlify.app/assets//api-instagram/profiles/black-panther/black-panther-profile.jpg" alt="User Avatar"></img>
-        </div>
-        <div class="user__name">T'Challa</div>
-      </a>
-    </header>
-  </article>
-  <article className="post">
-    <header className="post__header">
-      <a href="/users/blackpanther" class="user">
-        <div class="user__thumb">
-          {/* Avatar instead of img src */}
-          <img src="https://viniciusvinna.netlify.app/assets//api-instagram/profiles/black-panther/black-panther-profile.jpg" alt="User Avatar"></img>
-        </div>
-        <div class="user__name">T'Challa</div>
-      </a>
-    </header>
-  </article>
-  <article className="post">
-    <header className="post__header">
-      <a href="/users/blackpanther" class="user">
-        <div class="user__thumb">
-          {/* Avatar instead of img src */}
-          <img src="https://viniciusvinna.netlify.app/assets//api-instagram/profiles/black-panther/black-panther-profile.jpg" alt="User Avatar"></img>
-        </div>
-        <div class="user__name">T'Challa</div>
-      </a>
-    </header>
-  </article>
-  </div>
+
   )
 };
 
