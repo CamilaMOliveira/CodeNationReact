@@ -1,1 +1,74 @@
-v12.16.1
+
+> instadev@0.1.0 submit /Users/camilaoliveira/codenation/react-16
+> react-scripts test src/__tests__/submit.test.js --reporters=default --reporters=jest-junit "--watchAll=false"
+
+  console.error node_modules/react-dom/cjs/react-dom.development.js:88
+    Warning: Invalid DOM property `class`. Did you mean `className`?
+        in div (at Story.jsx:25)
+        in div (at Story.jsx:24)
+        in div (at Story.jsx:10)
+        in section (at Story.jsx:9)
+        in Story (at submit.test.js:63)
+        in Router (at submit.test.js:62)
+
+  console.error node_modules/react-dom/cjs/react-dom.development.js:88
+    Warning: Invalid DOM property `autoplay`. Did you mean `autoPlay`?
+        in video (at Story.jsx:30)
+        in div (at Story.jsx:29)
+        in div (at Story.jsx:28)
+        in div (at Story.jsx:27)
+        in div (at Story.jsx:10)
+        in section (at Story.jsx:9)
+        in Story (at submit.test.js:63)
+        in Router (at submit.test.js:62)
+
+  console.error node_modules/react-dom/cjs/react-dom.development.js:88
+    Warning: Invalid DOM property `playsinline`. Did you mean `playsInline`?
+        in video (at Story.jsx:30)
+        in div (at Story.jsx:29)
+        in div (at Story.jsx:28)
+        in div (at Story.jsx:27)
+        in div (at Story.jsx:10)
+        in section (at Story.jsx:9)
+        in Story (at submit.test.js:63)
+        in Router (at submit.test.js:62)
+
+  console.log src/containers/Stories/Stories.jsx:25
+    USER (STORIES) => []
+
+  console.log src/routes/FeedRoute/FeedRoute.jsx:20
+    Did Mount
+
+  console.log src/containers/Stories/Stories.jsx:25
+    USER (STORIES) => []
+
+  console.log src/containers/UserPosts/UserPosts.jsx:17
+    USER POSTS => []
+
+  console.log src/containers/UserPosts/UserPosts.jsx:11
+    Did Mount
+
+  console.log src/containers/Stories/Stories.jsx:25
+    USER (STORIES) => []
+
+  console.log src/routes/FeedRoute/FeedRoute.jsx:20
+    Did Mount
+
+  console.log src/routes/ProfileRoute/ProfileRoute.jsx:17
+    PROFILE ROUTE => USERNAME = undefined
+
+  console.log src/routes/ProfileRoute/ProfileRoute.jsx:26
+    PROFILE ROUTE => USERS = []
+
+  console.log src/routes/ProfileRoute/ProfileRoute.jsx:30
+    PROFILE ROUTE => specific_user = undefined
+
+  console.log src/routes/ProfileRoute/ProfileRoute.jsx:20
+    Did Mount
+
+  console.log src/containers/UsersList/UsersList.jsx:9
+    UsersList = []
+
+  console.log src/routes/UsersRoute/UsersRoute.jsx:9
+    Did Mount UsersRoute
+

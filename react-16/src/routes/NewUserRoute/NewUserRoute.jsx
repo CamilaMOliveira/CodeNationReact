@@ -4,7 +4,9 @@ import UserForm from '../../containers/UserForm';
 
 const NewUserRoute = () => {
     return(
-        <UserForm></UserForm>
+      <div data-testid="new-user-route">
+        <UserForm/>
+      </div>
     )
 };
 

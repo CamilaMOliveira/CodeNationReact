@@ -11,16 +11,8 @@ const FeedRoute = () => {
 
   const [users, setUsers] = React.useState([]);
   const [posts, setPosts] = React.useState([]);
+  const [stories, setStories] = React.useState([]);
   const [counter, setCounter] = React.useState(0);
-
-  // let getUser = (userId) => {
-  //   users.map((user) => {
-  //     if(userId === user.id) {
-  //       return user;
-  //     }
-  //     return null;
-  //   });
-  // }
 
   let getUser = (userId) => users.find(user => userId === user.id);
 
@@ -29,10 +21,14 @@ const FeedRoute = () => {
     fetch('https://5e7d0266a917d70016684219.mockapi.io/api/v1/users')
       .then((res) => res.json())
       .then(data => setUsers(data));
+
+    fetch('https://5e7d0266a917d70016684219.mockapi.io/api/v1/stories')
+      .then((res) => res.json())
+      .then(data => setStories(data));
   }, []);
 
   React.useEffect(() => {
-    console.log(`Use Effect iteration = ${counter}`);
+    // console.log(`Use Effect iteration = ${counter}`);
     if (counter === users.length) {
       return;
     }
@@ -47,6 +43,8 @@ const FeedRoute = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [users, counter]);
 
+  // console.log(`STORIES => ${JSON.stringify(stories)}`);
+
   function myTest() {
     console.log('Test bla');
     return(<Loading></Loading>)
@@ -55,8 +53,8 @@ const FeedRoute = () => {
   // myTest();
   return (
     <div data-testid="feed-route">
-      <Stories/>
-      {console.log(`Indo para Posts`)}
+      <Stories stories={stories}/>
+      {/* {console.log(`Indo para Posts`)} */}
       <Posts posts={posts} getUserHandler={getUser}/>
     </div>
   );

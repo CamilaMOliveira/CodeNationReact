@@ -10,8 +10,9 @@ const UserForm = () => {
     console.log("Cadastrado com sucesso");
    return(
     // alert('Hello!')
-    <div class="success-message">CADASTRADO COM SUCESSO</div>
-     //<SuccessMessage></SuccessMessage>
+    <div class="success-message">CADASTRADO COM SUCESSO
+      <SuccessMessage></SuccessMessage>
+     </div>
    );
   }
 

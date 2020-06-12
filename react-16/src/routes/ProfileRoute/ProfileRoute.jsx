@@ -41,7 +41,9 @@ const ProfileRoute = () => {
     );
   }
 
-  return null;
+  return (
+    <div data-testid="profile-route"></div>
+  );
 };
 
 export default ProfileRoute;

@@ -52,9 +52,16 @@ const Post = ({ postInfo, userInfo, isProfile }) => {
         <div className="post__status">
           <div className="user">
             <span>curtido por
-              <Link to="/"> {postInfo.comments[0].name} </Link>
+              <Link to="/"> 
+                {
+                  (postInfo.comments[0] !== undefined) ?
+                    postInfo.comments[0].name
+                    :
+                    ""
+                }
+              </Link>
               e outras
-              <Link to href="/"> {comments.length-1} pessoas</Link>
+              <Link to="/"> {comments.length-1} pessoas</Link>
             </span>
           </div>
         </div>
