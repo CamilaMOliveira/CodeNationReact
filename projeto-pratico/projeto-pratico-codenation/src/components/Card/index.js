@@ -5,9 +5,12 @@ import { Link } from "react-router-dom";
 
 function Card ({item}) {
   let discount = 0;
+  let nameDashed;
   /* Replace spaces in the name of the item with "_" so that
   the link won't contain spaces */
-  let nameDashed = item.name.replace(/ /g, "_").toLowerCase();
+  if(item.name !== undefined) {
+    nameDashed = item.name.replace(/ /g, "_").toLowerCase();
+  }
 
   if(item.discount_percentage !== "") {
     discount = 1;
