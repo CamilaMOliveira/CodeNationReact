@@ -30,10 +30,12 @@ function reducer(state = INITIAL_STATE, action) {
         case "SET_SEARCH":
           let searchResults = [];
           state.data.map(product => {
-            /* If what the user searched, exists in any product */
-            if(product.name.toLowerCase().indexOf(action.payload.toLowerCase()) !== -1){
-              /* Let's update the list of searched products */
-              searchResults.push(product);
+            if(product.name !== undefined) {
+              /* If what the user searched, exists in any product */
+              if(product.name.toLowerCase().indexOf(action.payload.toLowerCase()) !== -1){
+                /* Let's update the list of searched products */
+                searchResults.push(product);
+              }
             }
           });
 
